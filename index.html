@@ -1,21 +1,21 @@
 <!Doctype>
 <html>
 <head>
-    <meta charset="Utf-8">
+    <meta charset="utf-8">
 	<title>傳送教學</title>
-	<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+	<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
-	<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-	<script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+	<!-- <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> -->
+	<!-- <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> -->
 	<!-- 音效的javascript -->
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<script>
 		AFRAME.registerComponent('play', {
 			init: function () {
 				var entity = document.querySelector('#test');
-				this.el.addEventListener('click', function () {
+				this.el.addEventListener('click', function() {
 					entity.components.sound.playSound();
 				});
 			}
@@ -82,13 +82,9 @@
 		
 		<!-- 播放與關掉音效 -->
 		<a-entity geometry="primitive: circle; radius: 0.45" material="src:#muicon"  id="test" position="-8 -1.7 1.4" rotation="0 100 0" sound="src: #mus1">
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#playmu" position="-1.5 -1.5 0" play></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#pausemu" position="0 -1.5 0" pause></a-entity>
-		
 		<a-entity geometry="primitive: circle; radius: 0.5" material="src:#stopmu" position="1.5 -1.5 0" stop></a-entity>
-		
 		</a-entity>
 		
 		
@@ -107,16 +103,16 @@
 		<!-- 傳送點 0 0 0 -->
 		<a-image src="#footsteps" position="-0.26 0 11" rotation="0 0 0" checkpoint="offset: 0.26 0 -11" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 -20 -->
+		<!-- 傳送點 0 0 -20 -->
 		<a-image src="#footsteps" position="0 0 -8" rotation="0 15 0" checkpoint="offset: 0 0 -12" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 0 -->
+		<!-- 傳送點 0 0 0 -->
 		<a-image src="#footsteps" position="-0.26 0 -11" rotation="0 -176 0" checkpoint="offset: 0.26 0 11" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 -40 -->
-		<a-image src="#footsteps" position="0.7 0 -28" rotation="0 -71 0" checkpoint="offset: -0.7 0 -12" look-at="#cam-rig">
+		<!-- 傳送點 0 0 -40 -->
+		<a-image src="#footsteps" position="0.7 0 -28" rotation="0 180 0" checkpoint="offset: -0.7 0 -12" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點17 0 -30 -->
+		<!-- 傳送點 17 0 -30 -->
 		<a-image src="#footsteps" position="5 0 -39" rotation="0 90 0" checkpoint="offset: 12 0 9" look-at="#cam-rig">
 		</a-image>
 		<!-- 傳送點 0 0 -40 -->
@@ -125,29 +121,28 @@
 		<!-- 傳送點 0 0 -20 -->
 		<a-image src="#footsteps" position="10 0 -24.5" rotation="0 87 0" checkpoint="offset: -10 0 4.5" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 -20 -->
+		<!-- 傳送點 0 0 -20 -->
 		<a-image src="#footsteps" position="0 0 -31" rotation="0 15 0" checkpoint="offset: 0 0 11" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 -60 -->
+		<!-- 傳送點 0 0 -60 -->
 		<a-image src="#footsteps" position="0 0 -48" rotation="0 -10.2 0" checkpoint="offset: 0 0 -12" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點17 0 -50 -->
+		<!-- 傳送點 17 0 -50 -->
 		<a-image src="#footsteps" position="5 0 -59" rotation="0 90 0" checkpoint="offset: 12 0 9" look-at="#cam-rig">
 		</a-image>
 		<!-- 傳送點 0 0 -60 -->
 		<a-image src="#footsteps" position="9.7 0 -55" rotation="0 87 0" checkpoint="offset: -9.7 0 -5" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點17 0 -50 -->
+		<!-- 傳送點 17 0 -50 -->
 		<a-image src="#footsteps" position="5 0 -47" rotation="0 -29 0" checkpoint="offset: 12 0 -3" look-at="#cam-rig">
 		</a-image>
 		<!-- 傳送點 0 0 -40 -->
 		<a-image src="#footsteps" position="10 0 -46" rotation="0 87 0" checkpoint="offset: -10 0 5" look-at="#cam-rig">
 		</a-image>
-		
-		<!-- 傳送點0 0 -40 -->
+		<!-- 傳送點 0 0 -40 -->
 		<a-image src="#footsteps" position="0 0 -51" rotation="0 15 0" checkpoint="offset: 0 0 11" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 -80 -->
+		<!-- 傳送點 0 0 -80 -->
 		<a-image src="#footsteps" position="0.2 0 -68" rotation="2.3 -178 0" checkpoint="offset: -0.2 0 -12" look-at="#cam-rig">
 		</a-image>
 		<!-- 傳送點 20 0 -80 -->
@@ -156,7 +151,7 @@
 		<!-- 傳送點 0 0 -80 -->
 		<a-image src="#footsteps" position="11 0 -81" rotation="0 -90 0" checkpoint="offset: -11 0 1" look-at="#cam-rig">
 		</a-image>
-		<!-- 傳送點0 0 -60 -->
+		<!-- 傳送點 0 0 -60 -->
 		<a-image src="#footsteps" position="0 0 -71" rotation="0 15 0" checkpoint="offset: 0 0 11" look-at="#cam-rig">
 		</a-image>
 		
