@@ -163,15 +163,8 @@
 				  checkpoint-controls="mode: animate; animateSpeed: 10.0">						  
 		<!-- 鏡頭控制 -->
 			<a-entity camera look-controls>
-				<!-- <a-camera id="blink" cursor="fuse:true; fuseTimeout:1500" position="0 0 0" opacity="0"> -->
-				<!-- </a-camera> -->
-				<a-cursor id="blink"
-          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
-          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
-          event-set__1="_event: mouseenter; color: springgreen"
-          event-set__2="_event: mouseleave; color: black"
-          fuse="true"
-          raycaster="objects: .link"></a-cursor>
+				<a-camera id="blink" cursor="fuse:true; fuseTimeout:1500" position="0 0 0" opacity="0">
+				</a-camera>
 			</a-entity>
 		</a-entity>
 	</a-scene>
