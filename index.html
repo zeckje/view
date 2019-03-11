@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 	<title>傳送教學</title>
 	<script src="script/aframe.min.js"></script>
-	<script src="script/aframe-extras.min.js"></script>
-	<script src="script/super-hands.min.js"></script>
-	<script src="script/aframe-look-at-component.min.js"></script>
-	<!-- <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> -->
+	<!-- <script src="script/aframe-extras.min.js"></script> -->
+	<!-- <script src="script/super-hands.min.js"></script> -->
+	<!-- <script src="script/aframe-look-at-component.min.js"></script> -->
+	<script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
 	<!-- <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> -->
 	<!-- 音效的javascript -->
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
@@ -161,10 +161,16 @@
 			  	  movement-controls="controls: checkpoint"
 				  checkpoint-controls="mode: animate; animateSpeed: 10.0">						  
 		<!-- 鏡頭控制 -->
-			<a-entity progressive-controls>
-				<a-camera id="blink" cursor="fuse:true; fuseTimeout:1500" position="0 0 0" opacity="0">
-				</a-camera>
+			<!-- <a-entity progressive-controls> -->
+				<!-- <a-camera id="blink" cursor="fuse:true; fuseTimeout:1500" position="0 0 0" opacity="0"> -->
+				<!-- </a-camera> -->
+			<!-- </a-entity> -->
+			<a-camera>
+			<a-entity cursor position="0 0 -1"
+					  geometry="primitive: sphere; radius: 0.005"
+					  material="color: #000000; shader: flat; opacity: 0.5">
 			</a-entity>
+		</a-camera>
 		</a-entity>
 	</a-scene>
 </body>
