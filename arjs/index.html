@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Image based tracking AR.js demotitle></title>
+    
+    <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
+    <script src="script/arjs.js"></script>
+    <script src="script/aframe-gif-shader.js"></script>
+
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+</head>
+
+<!-- rawgithack development URL -->
+<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+
+
+<body style='margin : 0px; overflow: hidden;'>
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+    <a-scene
+        vr-mode-ui='enabled: false;'
+        renderer="logarithmicDepthBuffer: true;"
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+        <a-asset>
+        <img id="img1" src="img_1.png">
+        <video id="what-car" src="name.mp4"></video>        
+    </a-asset>
+        <a-nft
+            type='nft' url='https://bavistyc.github.io/arweb/image_descriptors/tracker_3'
+            smooth='true' smoothCount='1' smoothTolerance='0.01' smoothThreshold='2'>
+			<!--  圖片
+            geometry="primitive:形狀"
+             postion="x y z" x軸 往左是負數 往右是正數  y軸是調整上下的 往上是正數 往下是負數  z軸 調整靠近紙張 往前是正數 往後是負數
+             scale="100 100 100" 主要是調整圖片或者是模型大小 -->
+
+             <!-- <a-entity geometry="primitive:plane;" material="src:#img1" rotation="-90 0 0" scale="100 100 100"
+                position="5 0 0"></a-entity> -->
+                
+			<!-- GIF -->
+           <!-- <a-entity geometry="primitive:plane;" material="shader:gif;src:url(pic/img_5.gif);opacity:1" rotation="-90 0 0" scale="100 100 100" position="70 0 -100"> ></a-entity> -->
+
+      <!--video-->
+           <a-entity scale="1 1 1" rotation="-90 0 0">
+              <a-video play-on-scan src="#what-car"></a-video>
+        </a-entity>
+
+        </a-nft>
+		<a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>

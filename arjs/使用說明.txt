@@ -1,0 +1,13 @@
+1.使用gif檔加入這兩支api，沒要使用的話盡量不要加入
+<script src="script/arjs.js"></script>
+<script src="script/aframe-gif-shader.js"></script>
+
+參數
+
+ geometry="primitive:形狀"
+ postion="x y z" x軸 往左是負數 往右是正數  y軸是調整上下的 往上是正數 往下是負數  z軸 調整靠近紙張 往前是  
+ 正數 往後是負數
+ scale="100 100 100" 主要是調整圖片或者是模型大小
+ rotation="x y z " xyz軸會隨著rotation參數而改變成不同軸
+
+
